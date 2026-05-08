@@ -14,21 +14,18 @@
 
   /* Text Preset 1 */
   --text-1-font: "Inter", sans-serif;
-  --text-1-weight: 700; /* Bold */
   --text-1-size: 24px;
   --text-1-line-height: 150%;
   --text-1-letter-spacing: 0px;
 
   /* Text Preset 2 */
   --text-2-font: "Inter", sans-serif;
-  --text-2-weight: 400; /* Regular */
   --text-2-size: 14px;
   --text-2-line-height: 150%;
   --text-2-letter-spacing: 0px;
 
   /* Text Preset 3 */
   --text-3-font: "Inter", sans-serif;
-  --text-3-weight: 700; /* Bold */
   --text-3-size: 14px;
   --text-3-line-height: 150%;
   --text-3-letter-spacing: 0px;
@@ -60,10 +57,133 @@ ul {
   list-style: none;
 }
 
+/* Global styles for the body element, including font, background color, and centering content */
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: var(--text-2-font);
   justify-content: center;
   align-items: center;
+  background-color: var(--color-grey-900);
+}
+
+/* Mobile Profile Card */
+.profile-card {
+  /* layout */
+  display: flex;
+  width: 327px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+  padding: var(--spacing-300);
+  border-radius: 12px;
+  background-color: var(--color-grey-800);
+}
+
+.profile-pic {
+  /* layout */
+  width: 88px;
+  height: 88px;
+
+  /* styles */
+  border-radius: 50%;
+}
+
+.profile-info {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.title {
+  /* layout */
+  align-self: stretch;
+
+  /* styles */
+  color: var(--color-white);
+  text-align: center;
+  font-family: var(--text-1-font);
+  font-size: var(--text-1-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--text-1-line-height);
+}
+
+.location {
+  align-self: stretch;
+  color: var(--color-green-500);
+  text-align: center;
+  font-family: var(--text-2-font);
+  font-size: var(--text-2-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-2-line-height);
+}
+
+.bio {
+  align-self: stretch;
+  color: var(--color-white);
+  text-align: center;
+  font-family: var(--text-2-font);
+  font-size: var(--text-2-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-2-line-height);
+}
+
+.social-links,
+.social-links ul,
+.social-links li {
+  width: 100%;
+}
+
+.social-links ul {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-200);
+  align-self: stretch;
+  width: 100%;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  font-family: var(--text-2-font);
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--text-2-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-2-line-height);
+  padding: var(--spacing-150);
+  border-radius: 8px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  padding-bottom: var(--spacing-200);
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.attribution a {
+  color: var(--color-green-500);
+  text-decoration: none;
 }
