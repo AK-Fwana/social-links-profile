@@ -41,7 +41,9 @@
 
 /* Reset default browser styles and set box-sizing to border-box for all elements */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -73,7 +75,8 @@ body {
 .profile-card {
   /* layout */
   display: flex;
-  width: 327px;
+  max-width: 327px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-300);
@@ -187,6 +190,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: var(--spacing-300);
 }
 
 .attribution {
